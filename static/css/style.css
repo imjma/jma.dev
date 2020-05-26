@@ -1,0 +1,42 @@
+body {
+  font-family: Inter, Menlo, sans-serif;
+  margin: 0 auto;
+  background: #111;
+  line-height: 1.8em;
+  padding: 12px;
+  box-sizing: border-box;
+  color: #f0f0f0;
+  font-size: 2vw;
+}
+body,
+html {
+  height: 100%;
+}
+
+@media (max-width: 760px) {
+  body {
+    font-size: 16px;
+    line-height: 1.3em;
+  }
+}
+
+a,
+a:hover,
+body,
+html {
+  color: #f0f0f0;
+}
+a,
+a:hover {
+  border: 0;
+  text-decoration: underline;
+}
+
+h1 {
+  line-height: 1.3em;
+  font-weight: 500;
+}
+
+article {
+  line-height: 1.2em;
+}
