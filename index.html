@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-black text-gray-100 leading-loose p-4">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,36 +7,83 @@
       href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" type="text/css" href="static/css/style.css" />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
     <link
       href="data:image/png;base64,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"
       rel="shortcut icon"
     />
-    <meta name="twitter:title" content="jma.dev">
-    <meta name="twitter:description" content="Jie Ma; developer && photographer; Sydney, Australia;">
-    <meta name="twitter:image" content="https://pbs.twimg.com/profile_images/1265002853183025152/2jOjaRkk_400x400.jpg">
-    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Primary Meta Tags -->
     <title>jma.dev</title>
+    <meta name="title" content="jma.dev" />
+    <meta
+      name="description"
+      content="Jie Ma; developer && photographer; Sydney, Australia;"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jma.dev" />
+    <meta property="og:title" content="jma.dev" />
+    <meta
+      property="og:description"
+      content="Jie Ma; developer && photographer; Sydney, Australia;"
+    />
+    <meta property="og:image" content="https://jma.dev/avatar.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://jma.dev" />
+    <meta property="twitter:title" content="jma.dev" />
+    <meta
+      property="twitter:description"
+      content="Jie Ma; developer && photographer; Sydney, Australia;"
+    />
+    <meta property="twitter:image" content="https://jma.dev/avatar.png" />
   </head>
   <body>
     <div>
-      <header>
-        <h1>Jie Ma</h1>
+      <header class="text-6xl sm:flex sm:items-center">
+        <img
+          class="block mx-auto sm:mx-0 sm:flex-shrink-0 h-16 sm:h-24 rounded-full"
+          src="https://jma.dev/avatar.png"
+        />
+        <p class="pl-4">Jie Ma</p>
       </header>
-      <article>
+      <article class="text-base">
         <p>I am developer && photographer living in Sydney, Australia</p>
         <p>
           I develop on
-          <a href="https://github.com/imjma" target="_blank">GitHub</a>, photo on
-          <a href="https://www.instagram.com/filmape/" target="_blank"
+          <a href="https://github.com/imjma" target="_blank" class="underline"
+            >GitHub</a
+          >, photo on
+          <a
+            href="https://www.instagram.com/filmape/"
+            target="_blank"
+            class="underline"
             >Instagram</a
-          >, and write on <a href="https://jma.im" target="_blank">jma.im</a>
+          >, and write on
+          <a href="https://jma.im" target="_blank" class="underline">jma.im</a>
         </p>
-        <p>I also make a weekly bookmarks '<a href="https://www.notion.so/8559cec39e604db881734c719d082588?v=3bd85b19828d423ea2a3019af64bd2d6" target="_blank">funcmarks</a>'</p>
         <p>
-          You can contact me via <a href="mailto:me@jma.dev">email</a>,
-          <a href="https://twitter.com/imjma">Twitter</a>, or
-          <a href="https://www.linkedin.com/in/jiema/" target="_blank"
+          I also make a weekly bookmarks '<a
+            href="https://www.notion.so/8559cec39e604db881734c719d082588?v=3bd85b19828d423ea2a3019af64bd2d6"
+            target="_blank"
+            class="underline"
+            >funcmarks</a
+          >'
+        </p>
+        <p>
+          You can contact me via
+          <a href="mailto:im@jma.dev" class="underline">email</a>,
+          <a href="https://twitter.com/imjma" class="underline">Twitter</a>, or
+          <a
+            href="https://www.linkedin.com/in/jiema/"
+            target="_blank"
+            class="underline"
             >LinkedIn</a
           >
         </p>
